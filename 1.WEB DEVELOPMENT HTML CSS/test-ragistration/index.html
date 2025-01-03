@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Please fill out this survey form to help us improve our services.</p>
+    </header>
+
+    <main>
+        <form id="survey-form">
+
+            <label id="name-label" for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label id="email-label" for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label id="number-label" for="number">Age (optional):</label>
+            <input type="number" id="number" name="age" min="1" max="120" placeholder="Enter your age">
+
+
+            <label for="dropdown">Which option best describes your current role?</label>
+            <select id="dropdown" name="role" required>
+                <option value="">Select an option</option>
+                <option value="student">Student</option>
+                <option value="full-time-job">Full-time job</option>
+                <option value="full-time-learner">Full-time learner</option>
+                <option value="prefer-not-to-say">Prefer not to say</option>
+                <option value="other">Other</option>
+            </select>
+
+
+            <label>Would you recommend this survey to a friend?</label>
+            <div>
+                <input type="radio" id="recommend-yes" name="recommend" value="yes">
+                <label for="recommend-yes">Yes</label>
+            </div>
+            <div>
+                <input type="radio" id="recommend-no" name="recommend" value="no">
+                <label for="recommend-no">No</label>
+            </div>
+
+
+            <label>What technologies are you interested in? (Select all that apply)</label>
+            <div>
+                <input type="checkbox" id="tech-html" name="tech" value="html">
+                <label for="tech-html">HTML</label>
+            </div>
+            <div>
+                <input type="checkbox" id="tech-css" name="tech" value="css">
+                <label for="tech-css">CSS</label>
+            </div>
+            <div>
+                <input type="checkbox" id="tech-js" name="tech" value="javascript">
+                <label for="tech-js">JavaScript</label>
+            </div>
+
+
+            <label for="comments">Any comments or suggestions?</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"
+                placeholder="Enter your comments here"></textarea>
+
+
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </main>
+</body>
+
+</html>
